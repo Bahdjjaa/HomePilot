@@ -2,39 +2,46 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingTop="24dp"
+    android:paddingBottom="24dp">
 
     <Button
         android:id="@+id/voletsBtn"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
         android:background="@drawable/bgk"
         android:text="Volets"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/garageBtn"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/garageBtn"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
         android:background="@drawable/bgk"
         android:text="Garage"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/voletsBtn"
         app:layout_constraintBottom_toTopOf="@id/LimieresBtn"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/voletsBtn" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/LimieresBtn"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
         android:background="@drawable/bgk"
         android:text="Lumières"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/garageBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/garageBtn" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
