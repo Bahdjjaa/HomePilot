@@ -61,11 +61,21 @@ class DeviceCommandsActivity : AppCompatActivity() {
         }
 
         commands.forEach { command ->
-            val button = Button(this)
-            button.text = command
-            button.setOnClickListener {
-                devices.forEach { device ->
-                    sendCommand(device.id, command)
+            val button = com.google.android.material.button.MaterialButton(this).apply {
+                text = command
+                isAllCaps = false
+                cornerRadius = 50
+                setPadding(32, 12, 32, 12)
+                layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    marginEnd = 12
+                }
+                setOnClickListener {
+                    devices.forEach { device ->
+                        sendCommand(device.id, command)
+                    }
                 }
             }
             glbCmds.addView(button)

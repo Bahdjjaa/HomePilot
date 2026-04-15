@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Button
+import com.google.android.material.button.MaterialButton
 
 class DeviceAdapter(
     private val devices : ArrayList<DeviceData>,
@@ -41,10 +42,29 @@ class DeviceAdapter(
         holder.commands.removeAllViews()
 
         device.availableCommands.forEach { command ->
-            val button = Button(holder.itemView.context)
-            button.text = command
-            button.setOnClickListener { onCommandClick(device, command) }
-            holder.commands.addView(button)
+            val materialButton = MaterialButton(holder.itemView.context).apply {
+                text = command
+                isAllCaps = false
+                cornerRadius = 48
+                insetTop = 0
+                insetBottom = 0
+                minHeight = 0
+                minimumHeight = 0
+                setPadding(28, 10, 28, 10)
+
+                layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    marginEnd = 12
+                }
+
+                setOnClickListener {
+                    onCommandClick(device, command)
+                }
+            }
+
+            holder.commands.addView(materialButton)
         }
     }
 
