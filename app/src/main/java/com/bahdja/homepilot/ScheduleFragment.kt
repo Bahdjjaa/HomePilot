@@ -30,29 +30,11 @@ class ScheduleFragment : Fragment() {
     private var houseId: Int? = null
     private  var token: String? = null
 
-//    companion object {
-//        fun newInstance(type: String, token: String?, houseId: Int?): ScheduleFragment {
-//            val framgment = ScheduleFragment()
-//            val args = Bundle()
-//            args.putString("type", type)
-//            args.putString("token", token)
-//            args.putInt("houseId", houseId ?: 0)
-//            framgment.arguments = args
-//            return framgment
-//        }
-//    }
     fun setData(deviceType: String?, token: String?, houseId: Int?){
         this.deviceType = deviceType
         this.token = token
         this.houseId = houseId
     }
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        type = arguments?.getString("type")
-//        token = arguments?.getString("token")
-//        houseId = arguments?.getInt("houseId")
-//    }
 
 
     override fun onCreateView(
@@ -75,7 +57,7 @@ class ScheduleFragment : Fragment() {
 
         val commands = when(deviceType){
             "light" -> listOf("TURN ON", "TURN OFF")
-            "rolling shutter", "garage door" -> listOf("OPEN", "CLOSE") // Après PEUT ETRE Ajouter après un champ pour spécifier le pourcentage d'ouverture et de fermeture et le gérérer avec la commande STOP
+            "rolling shutter", "garage door" -> listOf("OPEN", "CLOSE")
             else -> emptyList()
         }
 
@@ -130,16 +112,11 @@ class ScheduleFragment : Fragment() {
 
         val intent = Intent(requireContext(), ScheduleReceiver::class.java).apply{
             putExtra("type", deviceType)
-            println("Type = $deviceType")
-
             putExtra("command", command)
-            println("command = $command")
-
             putExtra("houseId", houseId)
-            println("houseId = $houseId")
-
             putExtra("token", token)
-            println("token = $token")
+            putExtra("hour", hour)
+            putExtra("minute", minute)
         }
 
         val pendingIntent = PendingIntent.getBroadcast(
@@ -159,7 +136,6 @@ class ScheduleFragment : Fragment() {
             }
         }
 
-        // se répète tous les jours
         alarmManager.setExactAndAllowWhileIdle(
             AlarmManager.RTC_WAKEUP,
             calendar.timeInMillis,
