@@ -42,8 +42,7 @@ class HousesActivity : AppCompatActivity() {
 
     private fun displayHouses(){
         val list = findViewById<ListView>(R.id.housesListView)
-        val labels = houses.map { "Maison #${it.houseId} - ${if(it.owner) "Propriétaire" else "Invité"}" }
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, labels)
+        val adapter = HouseAdapter( this, houses)
         list.adapter = adapter
 
         list.setOnItemClickListener { _, _,position, _ ->

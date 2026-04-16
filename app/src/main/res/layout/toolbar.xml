@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="HomePilot"
-        android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textColor="@color/white_soft"
+        android:textSize="36sp"
         android:textStyle="bold"
         android:fontFamily="cursive"
         android:layout_gravity="center"/>

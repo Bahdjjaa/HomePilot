@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="background">#FAF5EF</color>
+    <color name="surface">#F1E3D3</color>
+    <color name="surface_alt">#FFFDFC</color>
+
+    <color name="primary">#8D7B68</color>
+    <color name="primary_dark">#6E6057</color>
+    <color name="secondary">#C8B6A6</color>
+    <color name="accent_soft">#E8D8C8</color>
+
+    <color name="text_primary">#2D2623</color>
+    <color name="text_secondary">#6E6057</color>
+    <color name="hint">#A59689</color>
+    <color name="stroke">#D6C8BB</color>
+
+    <color name="white_soft">#FFFDFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black_soft">#1F1A18</color>
+
+    <color name="nav_bg">#FFFDFC</color>
+    <color name="nav_selected">#8D7B68</color>
+    <color name="nav_unselected">#A59689</color>
+    <color name="nav_indicator">#E8D8C8</color>
 </resources>

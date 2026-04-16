@@ -67,8 +67,7 @@ class UsersFragment : Fragment() {
 
     private fun displayUsers(){
         val list = view?.findViewById<ListView>(R.id.usersListView)
-        val labels = users.map{ "${it.userLogin} - ${if (it.owner == 1) "Propriétaire" else "Invité" }"}
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_list_item_1, labels)
+        val adapter = UserAdapter(requireContext(), users)
         list?.adapter = adapter
     }
 

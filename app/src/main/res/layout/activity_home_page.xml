@@ -30,10 +30,15 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
-        android:layout_height="72dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_bg"
+        app:itemIconTint="@color/bottom_nav_bar_colors"
+        app:itemTextColor="@color/bottom_nav_bar_colors"
+        app:itemActiveIndicatorStyle="@style/HomePilot.BottomNav.ActiveIndicator"
+        app:menu="@menu/bottom_nav_bar"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/bottom_nav_bar" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

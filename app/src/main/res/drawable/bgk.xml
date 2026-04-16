@@ -4,7 +4,7 @@
     <solid android:color="#FFFFFF"/>
     <stroke
         android:width="3dp"
-        android:color="#E9A6D4"/>
+        android:color="@color/stroke"/>
     <padding
         android:bottom="5dp"
         android:left="5dp"
