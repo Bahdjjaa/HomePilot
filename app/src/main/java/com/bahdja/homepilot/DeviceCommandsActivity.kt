@@ -45,9 +45,9 @@ class DeviceCommandsActivity : AppCompatActivity() {
     private fun setTitle()
     {
         findViewById<TextView>(R.id.tvTitle).text = when(type) {
-            "rolling shutter" -> "Vollets"
+            "rolling shutter" -> "Volets"
             "garage door" -> "Garage"
-            "light" -> "Limières"
+            "light" -> "Lumières"
             else -> type
         }
     }

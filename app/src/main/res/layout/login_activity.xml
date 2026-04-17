@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
             android:hint="Login"
-            app:boxBackgroundColor="#FFFBFC"
+            app:boxBackgroundColor="@color/surface_alt"
             app:boxBackgroundMode="filled"
             app:boxCornerRadiusTopStart="18dp"
             app:boxCornerRadiusTopEnd="18dp"
@@ -52,8 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:textColor="#2F2A2D"
-                android:textColorHint="#A08791" />
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/hint" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:hint="Mot de passe"
-            app:boxBackgroundColor="#FFFBFC"
+            app:boxBackgroundColor="@color/surface_alt"
             app:boxBackgroundMode="filled"
             app:boxCornerRadiusTopStart="18dp"
             app:boxCornerRadiusTopEnd="18dp"
@@ -104,7 +104,7 @@
             android:id="@+id/goRegisterBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#FFFBFC"
+            android:backgroundTint="@color/surface_alt"
             android:onClick="createNewAccount"
             android:text="Créer un compte"
             android:textColor="@color/text_primary" />
